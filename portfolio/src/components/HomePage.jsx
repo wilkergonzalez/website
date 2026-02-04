@@ -1,7 +1,6 @@
 import React from 'react';
 import './HomePage.css';
 import Navigation from './Navigation';
-import { skillIcons } from '../assets/skillIcons';
 
 const HomePage = ({ userName }) => {
   const resumeData = {

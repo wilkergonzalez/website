@@ -5,9 +5,16 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "dev:vercel": "vercel dev --listen 3000",
+    "dev:vercel-port": "vercel dev",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "lint:fix": "eslint . --fix",
+    "preview": "vite preview",
+    "deploy": "vercel --prod",
+    "deploy:preview": "vercel",
+    "setup:env": "vercel env pull .env.local",
+    "test:api": "node test-api.js"
   },
   "dependencies": {
     "react": "^19.2.0",
