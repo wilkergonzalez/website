@@ -2,8 +2,8 @@ import { createClient } from '@supabase/supabase-js';
 import rateLimiter from './lib/rateLimiter.js';
 
 // Initialize Supabase client
-const supabaseUrl = 'https://qyjxxgkswwujnbomcejr.supabase.co';
-const supabaseAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InF5anh4Z2tzd3d1am5ib21jZWpyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjM2OTYxMDAsImV4cCI6MjA3OTI3MjEwMH0.ayZODxeBlIvUnqbTnMFmPkln0q33PtPpuHtRGLo8kME';
+const supabaseUrl = process.env.REACT_APP_SUPABASE_URL || 'https://qyjxxgkswwujnbomcejr.supabase.co';
+const supabaseAnonKey = process.env.REACT_APP_SUPABASE_ANON_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InF5anh4Z2tzd3d1am5ib21jZWpyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjM2OTYxMDAsImV4cCI6MjA3OTI3MjEwMH0.ayZODxeBlIvUnqbTnMFmPkln0q33PtPpuHtRGLo8kME';
 
 const supabase = createClient(supabaseUrl, supabaseAnonKey);
 

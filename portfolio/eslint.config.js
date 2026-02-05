@@ -26,4 +26,19 @@ export default defineConfig([
       'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
     },
   },
+  {
+    files: ['api/**/*.js'],
+    languageOptions: {
+      ecmaVersion: 2020,
+      globals: globals.node, // Allow Node.js globals for API functions
+      parserOptions: {
+        ecmaVersion: 'latest',
+        sourceType: 'commonjs', // Node.js modules
+      },
+    },
+    rules: {
+      'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
+      'no-console': 'off', // Allow console in API functions
+    },
+  },
 ])
